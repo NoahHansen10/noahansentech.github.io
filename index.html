@@ -1,23 +1,60 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NHT HOME LAB</title>
-<style>body{font-family:Arial,sans-serif;margin:0;padding:0;background-color:#f4f4f4}header{background-color:#333;color:#fff;text-align:center;padding:1rem 0}section{padding:2rem;max-width:800px;margin:2rem auto}footer{background-color:#333;color:#fff;text-align:center;padding:1rem 0;position:absolute;bottom:0;width:100%}</style>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1f1f1f; /* Dark background color */
+    color: #fff; /* Light text color */
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    display: flex; /* Add this to use flexbox */
+    align-items: center; /* Vertically center items */
+  }
+  /* Add styles for the text content */
+  .text-content {
+    flex: 1;
+    margin-right: 1rem; /* Add some spacing between text and image */
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
 </head>
-<body><div id='poweredBy' style='position: fixed; right: 0; bottom: 0; background-color: #0078D7; color: white; padding: 10px; z-index: 1000; border-top-left-radius: 10px; font-family: Roboto, sans-serif;'><span class='info-icon' style='margin-right: 5px; font-size: 1.2em;'>&#x2139;</span> Powered by <b><a href='https://converter.app' style='color: white;' target="_blank">Converter App</a></b>
-</div>
+<body>
 <header>
-<h1>NHT HOME LAB</h1>
+  <h1>NHT HOME LAB</h1>
 </header>
 <section>
-<h2>About Noah Hansen</h2>
-<p>An undergraduate student at Michigan Technological University studying for a B.S. in Cyber Security. Noah has experience in both large and small companies, and he has a deep passion for technology, especially in handheld devices, smartphones, and computer security. He has a rich history with technology, from receiving a Raspberry Pi in 5th grade to participating in online Capture the Flag (CTF) challenges in high school.</p>
+  <div class="text-content">
+    <h2>About Noah Hansen</h2>
+    <p>An undergraduate student at Michigan Technological University studying for a B.S. in Cyber Security. Noah has experience in both large and small companies, and he has a deep passion for technology, especially in handheld devices, smartphones, and computer security. He has a rich history with technology, from receiving a Raspberry Pi in 5th grade to participating in online Capture the Flag (CTF) challenges in high school.</p>
+  </div>
+  <!-- Add the image here -->
+  <img src="./headshot.jpg" alt="Noah Hansen's Image" style="max-width: 300px;">
 </section>
 <footer>
-<p>Contact: Canton, Michigan | ndhansen1031@gmail.com | (202) 455-6450 (VoIP)</p>
+  <p>Contact: Canton, Michigan | ndhansen1031@gmail.com | (202) 455-6450 (VoIP)</p>
 </footer>
 </body>
 </html>
