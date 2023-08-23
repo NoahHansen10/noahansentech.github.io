@@ -9,8 +9,8 @@ body {
 
 /* Rounded border effect for the profile picture */
 #headshot {
-  border-radius: 50%; /* Make the image completely round */
-  max-width: 70%; /* Ensure the image does not exceed the container */
+  border-radius: 10%; /* Make the image completely round */
+  max-width: 50%; /* Ensure the image does not exceed the container */
   height: auto; /* Maintain aspect ratio */
 }
 
@@ -47,7 +47,7 @@ nav a {
   display: grid;
   grid-template-columns: 1fr; /* Single-column layout for small screens */
   grid-gap: 20px; /* Reduce grid gap */
-  max-width: 70%; /* Ensure the content fits within the screen */
+  max-width: 50%; /* Ensure the content fits within the screen */
   margin: 2rem auto;
   padding: 1rem; /* Reduce padding */
 }
