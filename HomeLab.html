@@ -11,26 +11,11 @@
 <!-- Include the header container -->
 <header></header>
 <nav></nav>
-<style>
-    .container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
-      gap: 20px; /* Gap between grid items */
-      max-width: 960px; /* Limit the width of the container */
-      margin: 0 auto; /* Center the container */
-      padding: 20px;
-    }
-
-    .item {
-      background-color: #f0f0f0;
-      padding: 20px;
-      text-align: center;
-    }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <div class="container">
     <div>
-        <h1>Dell Server</h1>
+        <h2>Dell Server</h2>
         <li>CPU: Duel Xeon E5-2697</li>
         <li>72 Threads</li>
         <li>RAM: 64GB DDR4 ECC</li>
@@ -42,22 +27,26 @@
         <li>RAM: 32GB DDR3 ECC</li>
     </div>
     <div>
-        <h3>PTK</h3>
+        <h2>PTK</h2>
         <li>CPU: Ryzen 2600x</li>
         <li>12 Threads</li>
         <li>RAM: 32GB DDR4</li>
     </div>
     <div>
-        <h4>Physical Hardware</h4>
+        <h2>Physical Hardware</h2>
         <li>Asus Nighthawk Router</li>
         <li>Dell 24-port Switch</li>
         <li>Hp 24-port Switch</li>
-        <li>Raspberry Pi 4b @ Home Assistant</li>
+        <li>Raspberry Pi 4b</li>
     </div>
     <div>
-
+        <h2>SaaS</h2>
+        <li>CloudFlare for DNS, Zero Trust, Domain Hosting</li>
+        <li>AWS SES for email SMTP</li>
+        <li>GitHub Pages for web hosting</li>
     </div>
 </div>
+<div class="grid"></div>
 <section id="home"></section>
 
 <footer></footer>
