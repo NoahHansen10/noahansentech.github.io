@@ -136,11 +136,6 @@ footer {
 }
 
 /* Apply styles to each grid item */
-.container div {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-}
 
 * {
     margin: 0;
