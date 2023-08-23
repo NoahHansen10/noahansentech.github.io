@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NHT HOME LAB - Home</title>
+  <!-- Include the external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Include the header container -->
+  <header></header>
+  <nav></nav>
+
+  <section id="home">
+    <h1 style="text-align: center;"><b>About Me</b></h1>
+        <p>I am an undergraduate student at Michigan Technological University pursuing a Bachelor of Science degree in Cyber Security. My passion for technology began at a young age when I received a Raspberry Pi for Christmas and began experimenting with custom Minecraft servers. As I progressed through middle school, I gained experience in networking, API development, and website building by working on a public Minecraft server. </p>
+
+        <p>  In high school, I continued to explore various aspects of computer science, programming, and networking. I took classes in computer science and programming in C++ and Java, built my own gaming PC, and kept up-to-date with new technologies. My interest in cyber security and hacking emerged during my junior year, and I switched to using Linux full-time. I honed my skills by participating in online Capture the Flag (CTF) challenges and earned my Eagle Scout rank in 2020, demonstrating my ability to develop strong leadership skills and a commitment to serving my community. </p>
+
+        <p>  In college, I built a home lab environment with my roommate, which is used to host this website. I am also taking numerous classes related to Cyber Security and Networking which is just igniting my passion more. In August 2022, I completed an internship at Ford’s Cyber Defense Center, where I developed a python script to automate a time-consuming task, reducing the project time from 60+ hours to just 5 minutes. This experience gave me an opportunity to apply my technical skills in a real-world setting and I am eager to gain more hands-on experience in Cyber Security. </p>
+        <p>  In addition to my technical skills, I have had the opportunity to travel to many different places and cultures through my yearly vacations. These experiences have exposed me to different perspectives and ways of life, and have helped to broaden my understanding of the world. Additionally, I have been involved in the Boy Scouts organization for a significant portion of my life, which has given me the opportunity to develop strong leadership skills and a commitment to serving my community. Through my involvement in Boy Scouts, I have gained valuable experience in teamwork, problem-solving, and outdoor skills, which have been beneficial for both my personal and professional development. </p>
+
+        <p>  I am also COMPTIA A+ certified, which demonstrates my knowledge and skills in computer hardware and software. I also have interests in Forensics and psychology, both of which I have previously taken classes on, and I am looking forward to exploring more about these fields in the future.</p>
+  </section>
+
+  <footer></footer>
+
+  <!-- Include the JavaScript to dynamically insert the header and footer -->
+  <script>
+    const headerContainer = document.querySelector('header');
+    const footerContainer = document.querySelector('footer');
+    const navContainer = document.querySelector('nav');
+
+    fetch('header2.html')
+      .then(response => response.text())
+      .then(content => {
+        headerContainer.innerHTML = content;
+      })
+      .catch(error => {
+        console.error('Error fetching header content:', error);
+      });
+
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(content => {
+        navContainer.innerHTML = content;
+      })
+      .catch(error => {
+        console.error('Error fetching navbar:', error);
+      });
+
+
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(content => {
+        footerContainer.innerHTML = content;
+      })
+      .catch(error => {
+        console.error('Error fetching footer:', error);
+      });
+  </script>
+</body>
+</html>
