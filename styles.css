@@ -142,3 +142,9 @@ footer {
     padding: 0;
     box-sizing: border-box;
 }
+.hiddenLink {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
