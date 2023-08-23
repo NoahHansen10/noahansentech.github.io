@@ -11,7 +11,7 @@ fetch('header2.html')
     console.error('Error fetching header content:', error);
   });
 
-fetch('navbar.html')
+fetch('../navbar.html')
   .then(response => response.text())
   .then(content => {
     navContainer.innerHTML = content;
