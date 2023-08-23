@@ -6,29 +6,36 @@ body {
   background-color: #1f1f1f; /* Dark background color */
   color: #fff; /* Light text color */
 }
+
 /* Rounded border effect for the profile picture */
 #headshot {
-  border-radius: 5%; /* Use 50% to make the image completely round */
-  overflow: hiddent; /* This hides any parts of the image that exceed the rounded border */
+  border-radius: 50%; /* Make the image completely round */
+  max-width: 70%; /* Ensure the image does not exceed the container */
+  height: auto; /* Maintain aspect ratio */
 }
+
 /* Navigation bar styles */
 nav {
   background-color: #333;
   padding: 1rem 0;
 }
+
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: center;
 }
+
 nav ul li {
   display: inline-block;
-  margin-right: 40px;
+  margin-right: 20px; /* Reduce spacing between navigation items */
 }
+
 nav ul li:last-child {
-  margin-right: 0;
+  margin-right: 5;
 }
+
 nav a {
   color: #fff;
   text-decoration: none;
@@ -38,24 +45,20 @@ nav a {
 /* Grid layout for the main content */
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 40px;
-  max-width: 1200px;
+  grid-template-columns: 1fr; /* Single-column layout for small screens */
+  grid-gap: 20px; /* Reduce grid gap */
+  max-width: 70%; /* Ensure the content fits within the screen */
   margin: 2rem auto;
-  padding: 2rem;
+  padding: 1rem; /* Reduce padding */
 }
 
 /* Center the footer */
 .footer-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   background-color: #333;
   color: #fff;
   padding: 1rem 0;
-  position: relative; /* Add this line */
 }
-
 
 /* Rest of your existing styles... */
 
@@ -66,25 +69,25 @@ nav a {
 
 /* Increase font sizes... */
 body {
-  font-size: 1.05em;
+  font-size: 16px; /* Adjust font size */
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 24px; /* Adjust font size */
 }
 
 h2 {
-  font-size: 1.25em;
+  font-size: 20px; /* Adjust font size */
 }
 
 p {
-  font-size: 1.05em;
-  line-height: 2em;
+  font-size: 16px; /* Adjust font size */
+  line-height: 1.6; /* Adjust line height for better readability */
 }
 
 ul {
-  font-size: 1.05em;
-  line-height: 2em;
+  font-size: 16px; /* Adjust font size */
+  line-height: 1.6; /* Adjust line height for better readability */
 }
 
 header {
@@ -96,23 +99,17 @@ header {
   justify-content: center;
   align-items: center;
 }
-/* Center the footer */
-footer {
-  text-align: center;
-  background-color: #333;
-  color: #fff;
-  padding: 1rem 0;
-}
 
 /* Button 1 styles */
 .button1 {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 10px 30px 0 rgba(0, 0, 0, 0.19);
-  padding: 20px 30px;
+  padding: 10px 20px; /* Adjust padding for smaller screens */
   background-color: #fbcb07; /* Button background color */
   color: #000; /* Button text color */
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 14px; /* Adjust font size */
 }
 
 /* Button 2 hover effect */
