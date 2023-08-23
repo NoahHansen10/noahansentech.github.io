@@ -75,7 +75,7 @@ body {
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 h2 {
@@ -90,6 +90,9 @@ p {
 ul {
   font-size: 1.05em;
   line-height: 2em;
+}
+li {
+  line-height: 1.5em;
 }
 
 header {
@@ -147,4 +150,11 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
-
+.centerGrid {
+    display: grid;
+    grid-template-columns: 1fr; /* 3 columns with equal width */
+    gap: 20px; /* Gap between grid items */
+    max-width: 960px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+}
