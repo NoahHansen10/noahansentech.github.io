@@ -15,5 +15,5 @@
 
     // Redirect to the mobile subdomain if user is on a mobile device
     if (isMobileDevice()) {
-      window.location.href = "/mobile"; // Replace with your mobile subdomain URL
+      window.location.href = "mobile"; // Replace with your mobile subdomain URL
     }
