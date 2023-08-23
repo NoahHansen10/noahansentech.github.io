@@ -11,6 +11,15 @@
   <!-- Include the header container -->
   <header></header>
   <nav></nav>
+
+  <section id="home">
+    <h1 style="text-align: center;"><b>Experience</b></h1>
+    <div class="grid-container">
+      <div class="text-content">
+      </div>
+    </div>
+  </section>
+
   <footer></footer>
 
   <!-- Include the JavaScript to dynamically insert the header and footer -->
@@ -18,7 +27,7 @@
     const headerContainer = document.querySelector('header');
     const footerContainer = document.querySelector('footer');
     const navContainer = document.querySelector('nav');
-    
+
     fetch('header2.html')
       .then(response => response.text())
       .then(content => {
@@ -27,7 +36,7 @@
       .catch(error => {
         console.error('Error fetching header content:', error);
       });
-    
+
     fetch('navbar.html')
       .then(response => response.text())
       .then(content => {
