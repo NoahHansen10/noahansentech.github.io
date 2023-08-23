@@ -12,18 +12,18 @@
   <header></header>
   <nav></nav>
 <section id="home">
-    <div class="grid-container">
+    <!--<div class="grid-container">-->
       <div class="text-content">
         <h1>Noah Hansen</h1>
         <p>Hello there, I am an undergraduate student at Michigan Technological University studying for my B.S. in Cyber Security. I have experience working for both large and small companies, which has given me the opportunity to learn how to work well in both small and large teams.</p>
-        <a href="Resume-Noah-Hansen.pdf" target="_blank">
+        <a href="../Resume-Noah-Hansen.pdf" target="_blank">
           <button class="button1">Download Resume</button>
         </a>
         <a href="https://www.linkedin.com/in/noah-hansen1031/" target="_blank">
           <button class="button1">Linkedin</button>
         </a>
       </div>
-  <img id="headshot" src="./headshot.jpg" alt="Noah Hansen's Image" style="max-width: 500px;">
+  <img id="headshot" src="../headshot.jpg" alt="Noah Hansen's Image" style="max-width: 500px;">
   <h1>About Me</h1>
   <h1>Skills</h1>
   <p>CI have had a passion for technology since a young age, with a particular interest in handheld devices and smartphones. This passion deepened in 5th grade when I received a Raspberry Pi for Christmas, which sparked an interest in building custom Minecraft servers and experimenting with networking, API development, and website building.
@@ -42,9 +42,9 @@ I am currently a student at Michigan Technological University, pursuing a degree
     <li><b>Home Lab:</b> Proficient in TCP/IP, subnetting, network design, OSI 7-layer model, wireless communication</li>
     <li>Web Hosting, Game server hosting, Hyper-V, Setup/Deployment of wireless networks using 802.11 standards </li>
   </ul>
-    </div>
+    <!--</div>-->
       <h1 style="text-align: center;"><b>Experience</b></h1>
-      <div class="grid-container">
+      <!--<div class="grid-container">-->
         <div class="text-content">
           <h3>Amway (2023-2023):</h3>
           <p>In May 2023, I began my Internship in Amway's SOC as part of their engineering team. The main objective I had as part of my internship was to perform a threat gap analysis on Amway's overall security posture. I was able to identify gaps in Amway's systems and recommend mitigation techniques to ensure future security. Amway's internship program was quite comprehensive and gave myself along with the other interns excellent opportunities to network both within the company but also to other local companies like Meijer. </p>
@@ -75,7 +75,7 @@ I am currently a student at Michigan Technological University, pursuing a degree
             <button class="button1">S.I.T.S.</button>
           </a>
         </div>
-      </div>
+      <!--</div>-->
   </section>
 <footer class="footer-container">
   <!-- Your footer content here -->
@@ -116,16 +116,6 @@ I am currently a student at Michigan Technological University, pursuing a degree
   .catch(error => {
     console.error('Error fetching footer:', error);
   });
-
-    // Function to detect if the user is using a mobile device
-    function isMobileDevice() {
-      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
-
-    // Redirect to the mobile subdomain if user is on a mobile device
-    if (isMobileDevice()) {
-      window.location.href = "https://dev.noahhansentech.tk/mobile"; // Replace with your mobile subdomain URL
-    }
   </script>
 
 </body>
