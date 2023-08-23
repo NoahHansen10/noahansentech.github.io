@@ -20,7 +20,7 @@ fetch('navbar.html')
     console.error('Error fetching navbar:', error);
   });
 
-fetch('footer.html')
+fetch('footer2.html')
   .then(response => response.text())
   .then(content => {
     footerContainer.innerHTML = content;
