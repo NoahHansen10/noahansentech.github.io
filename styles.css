@@ -61,7 +61,7 @@ nav a {
 
 /* Add styles for the text content */
 .text-content {
-  font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0 auto;
     padding: 0 auto;
     background-color: #1f1f1f; /* Dark background color */
