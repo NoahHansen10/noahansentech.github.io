@@ -136,9 +136,9 @@ footer {
     }
 .centerGrid {
     display: grid;
-    grid-template-columns: 1;
-    max-width 960px;
-    margin: 0 auto;
-    padding: 20px;
-
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
 }
