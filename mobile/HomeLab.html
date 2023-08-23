@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=.8">
+    <title>NHT HOME LAB - Home</title>
+    <!-- Include the external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Include the header container -->
+<header></header>
+<nav></nav>
+<section id="home">
+    <div>
+        <h1 style="text-align: center;">Hardware</h1>
+    </div>
+    <div class="container">
+        <div>
+            <h2>Dell Server</h2>
+            <li>CPU: Duel Xeon E5-2697</li>
+            <li>72 Threads</li>
+            <li>RAM: 64GB DDR4 ECC</li>
+        </div>
+        <div>
+            <h2>ITX Server</h2>
+            <li>CPU: Single Xeon E5-4620</li>
+            <li>16 threads</li>
+            <li>RAM: 32GB DDR3 ECC</li>
+        </div>
+        <div>
+            <h2>PTK</h2>
+            <li>CPU: Ryzen 2600x</li>
+            <li>12 Threads</li>
+            <li>RAM: 32GB DDR4</li>
+        </div>
+        <div>
+            <h2>Physical Hardware</h2>
+            <li>Asus Nighthawk Router</li>
+            <li>Dell 24-port Switch</li>
+            <li>Hp 24-port Switch</li>
+            <li>Raspberry Pi 4b</li>
+        </div>
+        <div>
+            <h2>SaaS</h2>
+            <li>CloudFlare DNS, Domain Hosting</li>
+            <li>AWS SES for email SMTP</li>
+            <li>GitHub Pages for web hosting</li>
+        </div>
+    </div>
+    <div style="margin: 0 auto">
+        <h1 style="text-align: center;"><b>Software</b></h1>
+        <p class="centerGrid">The PCs are clustered together using Proxmox with a number of containers, performing all of my required fuctions. The Raspberry PI is running a local hostassistant instance which I have gained remote access to though the use of cloudflared zero trust tunneling.</p>
+        <h1 style="text-align: center;"><b>Security</b></h1>
+        <p class="centerGrid">I am using Cloudflare Zero Trust Tunnels to remove the need for port forwarding and to help reduce the threat level from using consumer equipment and gain a non-dynmapic point of access, using Cloudflare also allows for easier DNS management, and fast and simple domain integration with a large number of domain providers. While this is not a perfect system it works well enough for a dorm room system.</p>
+    </div>
+</section>
+<footer></footer>
+<!-- Include the JavaScript to dynamically insert the header and footer -->
+<script src="scripts.js"></script>
+</script>
+</body>
+</html>
