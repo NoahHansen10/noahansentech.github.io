@@ -9,7 +9,7 @@ body {
 /* Rounded border effect for the profile picture */
 #headshot {
   border-radius: 5%; /* Use 50% to make the image completely round */
-  overflow: hiddent; /* This hides any parts of the image that exceed the rounded border */
+  overflow: hidden; /* This hides any parts of the image that exceed the rounded border */
 }
 /* Navigation bar styles */
 nav {
