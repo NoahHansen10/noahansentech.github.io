@@ -11,7 +11,22 @@
 <!-- Include the header container -->
 <header></header>
 <nav></nav>
+<style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+      gap: 20px; /* Gap between grid items */
+      max-width: 960px; /* Limit the width of the container */
+      margin: 0 auto; /* Center the container */
+      padding: 20px;
+    }
 
+    .item {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+</style>
 </head>
 <div class="container">
     <div>
