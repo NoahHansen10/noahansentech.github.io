@@ -24,5 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         listItem.appendChild(postDate);
 
         postList.appendChild(listItem);
+        console.log(`Generating link for: ${postMetadata.fileName}`);
+
     });
 });
