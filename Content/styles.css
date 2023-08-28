@@ -43,49 +43,42 @@ a:hover {
 }
 /* styles.css */
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex; /* Use flexbox to center content vertically */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    min-height: 100vh; /* Set a minimum height to ensure content covers the entire viewport */
+}
+
 .post-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;    /* Center horizontally */
-    align-items: center;        /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     background-color: #f5f5f5;
-    padding: 20px;              /* Add padding to the post list */
+    padding: 20px; /* Add padding to the post list */
 }
 
 .post-item {
-    display: flex;
-    width: 600px;               /* Adjust the width as needed */
-    height: 300px;
-    margin: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #fff;
-    background-color: #444444;
-    border-radius: 8px;
-    text-decoration: none; /* Remove the default link underline */
-    justify-content: center;
+    /* Your existing styles for post items */
 }
 
 .post-image {
-    width: 80%; /* Set the width for the image */
-    border-radius: 8px; /* Add rounding to the image */
-    background-size: cover;
-    background-position: center;
+    /* Your existing styles for post images */
 }
 
 .post-content {
-    padding: 0 20px; /* Add padding to the content area */
-    margin auto; /* Add left padding for spacing */
+    /* Your existing styles for post content */
+    padding-left: 20px; /* Add left padding for spacing */
 }
 
 .post-link {
-    display: block;     /* Make the entire post item clickable */
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: inherit;
-    margin-top: 0px;
-    margin-left: 20px;
+    /* Your existing styles for post links */
+    margin-top: 10px; /* Add top margin for spacing */
 }
 
 .post-item h2 {

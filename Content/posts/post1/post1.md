@@ -9,4 +9,7 @@ image: post1.jpg
 
 This is the content of my first post. It supports **Markdown** formatting, so you can include headers, lists, links, and more.
 
-Not to mention ![image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/RedCat_8727.jpg/1200px-RedCat_8727.jpg)
+Not to mention 
+
+
+![image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/RedCat_8727.jpg/1200px-RedCat_8727.jpg)
