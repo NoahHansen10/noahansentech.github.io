@@ -6,10 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const postsDirectory = '/Posts/';
     const postsMetadata = [
         { fileName: 'post1', title: 'Post 1 Title', date: '2023-08-01' }
+        console.log("Script started");
         // Add more post metadata as needed
     ];
 
     postsMetadata.forEach(postMetadata => {
+        console.log(document.getElementById('post-list'));
+
         const postLink = document.createElement('a');
         postLink.href = `posts.html?post=${postMetadata.fileName}`;
         postLink.textContent = postMetadata.title;
