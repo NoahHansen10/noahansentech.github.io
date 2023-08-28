@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First Post</title>
+    <title>My Forum</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 <header>
-    <h1>My First Post</h1>
+    <h1>Welcome to My Forum</h1>
 </header>
 
 <main>
-    <div id="post-content">
-        <!-- Post content will be inserted here using JavaScript -->
-    </div>
+    <section id="search-sort">
+        <input type="text" id="search-input" placeholder="Search posts...">
+        <select id="sort-select">
+            <option value="date">Sort by Date</option>
+            <option value="title">Sort by Title</option>
+        </select>
+    </section>
+
+    <section id="posts">
+        <!-- Posts will be inserted here -->
+    </section>
 </main>
 
 <footer>
     <p>&copy; 2023 My Forum</p>
 </footer>
 
-<script>
-    fetch('Posts/post1.md')
-        .then(response => response.text())
-        .then(text => {
-            // Convert Markdown to HTML (you'll need a Markdown library)
-            // Example: const converter = new showdown.Converter();
-            // const html = converter.makeHtml(text);
-            document.getElementById('post-content').innerHTML = html;
-        });
-</script>
+<script src="markdown-it.min.js"></script>
+<script src="postScripts.js"></script>
 </body>
 </html>
