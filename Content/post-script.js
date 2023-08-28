@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         const postImage = document.createElement('div'); // Container for background image
                         postImage.classList.add('post-image');
-                        postImage.style.backgroundImage = `url('/Content/posts/${folderName}/${imageFileName}')`;
+                        postImage.style.backgroundImage = `url('https://www.noahhansentech.com/Content/posts/${folderName}/${imageFileName}')`;
 
                         postItem.appendChild(postImage);
 
