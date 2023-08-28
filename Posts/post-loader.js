@@ -1,16 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const postName = urlParams.get('post');
 
-const headerContent = `
-    <h1>Welcome to My Blog</h1>
-`;
-
-const footerContent = `
-    <p>Thanks for reading!</p>
-`;
-
-document.getElementById('custom-header').innerHTML = headerContent;
-
 if (postName) {
     fetch(`/Posts/${postName}`)
         .then(response => {
