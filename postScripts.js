@@ -17,22 +17,20 @@ function loadPost(postName) {
         });
 }
 
-// Function to filter posts based on search input
-function filterPosts(searchTerm) {
+// Function to read and load all posts
+function loadAllPosts() {
     const postsSection = document.getElementById('posts');
     postsSection.innerHTML = ''; // Clear existing posts
 
-    fetch('posts.json') // Assuming you have a JSON file listing post names
+    fetch('posts-list.json') // This could be a JSON array of post names
         .then(response => response.json())
         .then(postList => {
             postList.forEach(postName => {
-                if (postName.includes(searchTerm)) {
-                    loadPost(postName);
-                }
+                loadPost(postName);
             });
         })
         .catch(error => {
-            console.error('Error loading post list:', error);
+            console.error('Error loading posts list:', error);
         });
 }
 
@@ -47,20 +45,8 @@ const sortSelect = document.getElementById('sort-select');
 sortSelect.addEventListener('change', () => {
     // Implement sorting logic here based on selected option
     // For example, you could sort post names and then load them
-    fetch('sorted-posts.json') // Assuming you have a sorted JSON file
-        .then(response => response.json())
-        .then(sortedPostList => {
-            const postsSection = document.getElementById('posts');
-            postsSection.innerHTML = ''; // Clear existing posts
-
-            sortedPostList.forEach(postName => {
-                loadPost(postName);
-            });
-        })
-        .catch(error => {
-            console.error('Error loading sorted post list:', error);
-        });
+    loadAllPosts();
 });
 
-// Initial load of posts (you can call this based on your needs)
-filterPosts(''); // Load all posts initially
+// Initial load of all posts (you can call this based on your needs)
+loadAllPosts();
