@@ -1,6 +1,16 @@
 const urlParams = new URLSearchParams(window.location.search);
 const postName = urlParams.get('post');
 
+const headerContent = `
+    <h1>Welcome to My Blog</h1>
+`;
+
+const footerContent = `
+    <p>Thanks for reading!</p>
+`;
+
+document.getElementById('custom-header').innerHTML = headerContent;
+
 if (postName) {
     fetch(`/Posts/${postName}.md`)
         .then(response => {
@@ -10,14 +20,14 @@ if (postName) {
             return response.text();
         })
         .then(markdown => {
-            const md = window.markdownit();
-            const htmlContent = md.render(markdown);
-            document.getElementById('post-content').innerHTML = htmlContent;
+            document.getElementById('post-content').textContent = markdown;
         })
         .catch(error => {
             console.error("Error fetching the .md file:", error);
-            document.getElementById('post-content').innerHTML = 'Error loading post content.';
+            document.getElementById('post-content').textContent = 'Error loading post content.';
         });
 } else {
-    document.getElementById('post-content').innerHTML = 'No post specified.';
+    document.getElementById('post-content').textContent = 'No post specified.';
 }
+
+document.getElementById('custom-footer').innerHTML = footerContent;
