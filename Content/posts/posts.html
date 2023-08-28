@@ -10,7 +10,7 @@
 
 <script>
     async function fetchAndDisplayDirectory() {
-        const folderPath = "path/to/your/folder";
+        const folderPath = "/Content/posts";
         const response = await fetch("https://api.github.com/repos/Noahboss67/noahansentech.github.io/contents/${folderPath}");
         const data = await response.json();
 
