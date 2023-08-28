@@ -22,15 +22,18 @@ function filterPosts(searchTerm) {
     const postsSection = document.getElementById('posts');
     postsSection.innerHTML = ''; // Clear existing posts
 
-    // Loop through posts and load matching ones
-    // You'll need to modify this to match your post naming convention
-    const allPostNames = ['post1', 'post2', 'post3']; // Example post names
-
-    allPostNames.forEach(postName => {
-        if (postName.includes(searchTerm)) {
-            loadPost(postName);
-        }
-    });
+    fetch('posts.json') // Assuming you have a JSON file listing post names
+        .then(response => response.json())
+        .then(postList => {
+            postList.forEach(postName => {
+                if (postName.includes(searchTerm)) {
+                    loadPost(postName);
+                }
+            });
+        })
+        .catch(error => {
+            console.error('Error loading post list:', error);
+        });
 }
 
 // Event listeners for search input and sort select
@@ -44,18 +47,20 @@ const sortSelect = document.getElementById('sort-select');
 sortSelect.addEventListener('change', () => {
     // Implement sorting logic here based on selected option
     // For example, you could sort post names and then load them
-    const sortedPostNames = ['post1', 'post2', 'post3']; // Example sorted post names
+    fetch('sorted-posts.json') // Assuming you have a sorted JSON file
+        .then(response => response.json())
+        .then(sortedPostList => {
+            const postsSection = document.getElementById('posts');
+            postsSection.innerHTML = ''; // Clear existing posts
 
-    const postsSection = document.getElementById('posts');
-    postsSection.innerHTML = ''; // Clear existing posts
-
-    sortedPostNames.forEach(postName => {
-        loadPost(postName);
-    });
+            sortedPostList.forEach(postName => {
+                loadPost(postName);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading sorted post list:', error);
+        });
 });
 
 // Initial load of posts (you can call this based on your needs)
-const initialPosts = ['post1', 'post2', 'post3']; // Example initial post names
-initialPosts.forEach(postName => {
-    loadPost(postName);
-});
+filterPosts(''); // Load all posts initially
