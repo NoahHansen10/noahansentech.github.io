@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const postList = document.getElementById('post-list');
 
     // Replace 'posts/' with the correct path to your directory
-    const postsDirectory = 'posts/';
+    const postsDirectory = 'Posts/';
 
     // List of post file names (without the .md extension)
     const postFileNames = [
