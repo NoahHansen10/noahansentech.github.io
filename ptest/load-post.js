@@ -4,7 +4,7 @@ const urlParams = new URLSearchParams(queryString);
 const postName = urlParams.get('posts');
 
 // Assuming you have a directory called 'posts' where your .md files are stored
-const mdFilePath = `/Posts/${postName}.md`;
+const mdFilePath = `posts/${postName}.md`;
 
 // Fetch the .md file
 fetch(mdFilePath)
