@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Directory Listing</title>
+</head>
+<body>
+<h1>Directory Listing</h1>
+
+<div id="file-list"></div>
+
+<script>
+    async function fetchAndDisplayDirectory() {
+        const response = await fetch("https://api.github.com/repos/Noahboss67/noahhansentech.github.io/contents/");
+        const data = await response.json();
+
+        const fileListDiv = document.getElementById("file-list");
+
+        data.forEach(item => {
+            const link = document.createElement("a");
+            link.href = item.html_url;
+            link.textContent = item.name;
+            fileListDiv.appendChild(link);
+            fileListDiv.appendChild(document.createElement("br"));
+        });
+    }
+
+    fetchAndDisplayDirectory();
+</script>
+</body>
+</html>
