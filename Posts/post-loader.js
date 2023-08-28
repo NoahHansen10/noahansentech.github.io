@@ -12,7 +12,7 @@ const footerContent = `
 document.getElementById('custom-header').innerHTML = headerContent;
 
 if (postName) {
-    fetch(`/Posts/${postName}.md`)
+    fetch(`/Posts/${postName}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
