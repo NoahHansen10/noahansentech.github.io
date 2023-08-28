@@ -5,9 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const postsDirectory = '/';
     const postsMetadata = [
-        { fileName: 'post1', title: 'Post 1 Title', date: '2023-08-01' },
-        { fileName: 'post2', title: 'Post 2 Title', date: '2023-08-10' },
-        { fileName: 'post3', title: 'Post 3 Title', date: '2023-08-20' }
+        { fileName: 'post1', title: 'Post 1 Title', date: '2023-08-01' }
         // Add more post metadata as needed
     ];
 
