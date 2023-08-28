@@ -1,20 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const postInfoSection = document.getElementById('post-info');
+    const postList = document.getElementById('post-list');
 
-    const params = new URLSearchParams(window.location.search);
-    const postFileName = params.get('post');
+    const postsDirectory = 'Posts/';
+    const postsMetadata = [
+        { fileName: 'post1', title: 'TestingPost1', date: '2023-08-01' }
+        // Add more post metadata as needed
+    ];
 
-    if (postFileName) {
-        fetch(`posts/${postFileName}.md`)
-            .then(response => response.text())
-            .then(markdown => {
-                const postContent = document.createElement('div');
-                postContent.innerHTML = md.render(markdown);
+    postsMetadata.forEach(postMetadata => {
+        const postLink = document.createElement('a');
+        postLink.href = `${postsDirectory}${postMetadata.fileName}.md`;
+        postLink.textContent = postMetadata.title;
 
-                postInfoSection.appendChild(postContent);
-            })
-            .catch(error => {
-                console.error('Error loading post content:', error);
-            });
-    }
+        const listItem = document.createElement('li');
+        listItem.appendChild(postLink);
+
+        // Create additional elements for post information
+        const postDate = document.createElement('span');
+        postDate.className = 'post-date';
+        postDate.textContent = `Posted on ${postMetadata.date}`;
+        listItem.appendChild(postDate);
+
+        postList.appendChild(listItem);
+    });
 });
