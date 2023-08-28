@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const postsDirectory = 'Posts/';
     const postFileNames = [
-        'post1.md'
+        'post1'
         // Add more post file names as needed
     ];
 
