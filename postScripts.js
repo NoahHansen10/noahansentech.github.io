@@ -1,52 +1,26 @@
-// Assuming markdown-it.min.js is in the same directory as your script.js
-const md = window.markdownit();
+document.addEventListener('DOMContentLoaded', function() {
+    const postList = document.getElementById('post-list');
 
-// Function to load and render Markdown content
-function loadPost(postName) {
-    fetch(`posts/${postName}.md`)
-        .then(response => response.text())
-        .then(markdown => {
-            const postDiv = document.createElement('div');
-            postDiv.innerHTML = md.render(markdown);
+    // Replace 'posts/' with the correct path to your directory
+    const postsDirectory = 'posts/';
 
-            const postsSection = document.getElementById('posts');
-            postsSection.appendChild(postDiv);
-        })
-        .catch(error => {
-            console.error('Error loading post:', error);
-        });
-}
+    // List of post file names (without the .md extension)
+    const postFileNames = [
+        'post1',
+        'post2',
+        'post3'
+        // Add more post file names as needed
+    ];
 
-// Function to read and load all posts
-function loadAllPosts() {
-    const postsSection = document.getElementById('posts');
-    postsSection.innerHTML = ''; // Clear existing posts
+    // Populate the list with links to posts
+    postFileNames.forEach(postFileName => {
+        const postLink = document.createElement('a');
+        postLink.href = `${postsDirectory}${postFileName}.md`;
+        postLink.textContent = postFileName;
 
-    fetch('posts-list.json') // This could be a JSON array of post names
-        .then(response => response.json())
-        .then(postList => {
-            postList.forEach(postName => {
-                loadPost(postName);
-            });
-        })
-        .catch(error => {
-            console.error('Error loading posts list:', error);
-        });
-}
+        const listItem = document.createElement('li');
+        listItem.appendChild(postLink);
 
-// Event listeners for search input and sort select
-const searchInput = document.getElementById('search-input');
-searchInput.addEventListener('input', () => {
-    const searchTerm = searchInput.value.toLowerCase();
-    filterPosts(searchTerm);
+        postList.appendChild(listItem);
+    });
 });
-
-const sortSelect = document.getElementById('sort-select');
-sortSelect.addEventListener('change', () => {
-    // Implement sorting logic here based on selected option
-    // For example, you could sort post names and then load them
-    loadAllPosts();
-});
-
-// Initial load of all posts (you can call this based on your needs)
-loadAllPosts();
