@@ -158,3 +158,9 @@ footer {
     margin: 0 auto; /* Center the container */
     padding: 20px;
 }
+.post-date {
+    display: block;
+    color: #777;
+    font-size: 0.8rem;
+}
+
