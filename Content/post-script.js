@@ -54,24 +54,14 @@ document.addEventListener('DOMContentLoaded', function() {
 // Function to fetch folder names from a directory
 // Function to fetch folder names from a directory
 // Function to fetch folder names from a directory
+// Function to fetch folder names from a directory
 async function fetchFolderNames(directory) {
-    const response = await fetch(directory);
-    const html = await response.text();
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
+    const response = await fetch(`https://api.github.com/repos/Noahboss67/noahansentech.github.io/contents/Content/posts`);
+    const data = await response.json();
 
-    const folderNames = Array.from(doc.querySelectorAll('a'))
-        .filter(link => {
-            const href = link.getAttribute('href');
-            return href && href.endsWith('/') && !href.startsWith('../') && href !== '/';
-        })
-        .map(link => {
-            const href = link.getAttribute('href');
-            return href.slice(0, -1); // Remove the trailing /
-        })
-        .filter(folderName => folderName) // Filter out any empty folder names
-        .map(folderName => folderName.replace(/[/\.]/g, '')) // Remove all / and .
-        .filter(folderName => folderName); // Filter out any remaining empty folder names
+    const folderNames = data
+        .filter(item => item.type === 'dir')
+        .map(item => item.name);
 
     return folderNames;
 }
