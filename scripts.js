@@ -2,7 +2,7 @@ const headerContainer = document.querySelector('header');
 const footerContainer = document.querySelector('footer');
 const navContainer = document.querySelector('nav');
 
-fetch('header2.html')
+fetch('/header2.html')
   .then(response => response.text())
   .then(content => {
     headerContainer.innerHTML = content;
@@ -11,7 +11,7 @@ fetch('header2.html')
     console.error('Error fetching header content:', error);
   });
 
-fetch('navbar.html')
+fetch('/navbar.html')
   .then(response => response.text())
   .then(content => {
     navContainer.innerHTML = content;
@@ -20,7 +20,7 @@ fetch('navbar.html')
     console.error('Error fetching navbar:', error);
   });
 
-fetch('footer.html')
+fetch('/footer.html')
   .then(response => response.text())
   .then(content => {
     footerContainer.innerHTML = content;
