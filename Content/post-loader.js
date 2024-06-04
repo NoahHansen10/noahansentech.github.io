@@ -14,7 +14,7 @@ fetch(mdFilePath)
     const contentWithoutMetadata = mdContent.replace(/^---([\s\S]*?)---/, '');
 
     // Extract title from Markdown content
-    const title = contentWithoutMetadata.match(/^#\s+(.*)/m)[1];
+    const title = contentWithoutMetadata.match(/^#\s+(.*)/m)[0];
 
     // Set the title of the webpage
     document.title = title;
