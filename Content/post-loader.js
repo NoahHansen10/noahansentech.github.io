@@ -12,7 +12,7 @@ fetch(mdFilePath)
   .then(mdContent => {
     // Remove YAML metadata blocks (e.g., title, date)
     const contentWithoutMetadata = mdContent.replace(/^---([\s\S]*?)---/, '');
-
+    console.log(mdContent);
     // Extract title from Markdown content
     const title = contentWithoutMetadata.match(/^#\s+(.*)/m)[0];
 
