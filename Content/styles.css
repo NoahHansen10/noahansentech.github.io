@@ -62,6 +62,7 @@ body {
 
 #post-content-inner img {
     border: 2px solid #fbcb07;
+    max-width: 100%;
 }
 
 #post-content-inner h1 {
