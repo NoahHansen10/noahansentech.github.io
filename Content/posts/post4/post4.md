@@ -2,7 +2,7 @@
 title: LANL Automated Penetration Testing
 date: 2023-10-18
 desc: Automated Penetration Testing for virtual machines for LANL
-image: 
+image: null
 tags:
   - SQL
   - Database
