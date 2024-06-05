@@ -20,6 +20,13 @@ tags:
 
 ## Introduction:
 
+From 08-22-2023 through 04-26-24 I lead a team for my Enterprise at Michigan Tech, The project was given to us by the Los Alamos National Labartory (LANL) and had the goal of automatically penetration testing virtual machines deployed on our infastructure. My team was orginally on half of 2 team which eventially became 3 teams which I managed. 
+
+Team 1 (my original): Automated Penetration Testing 
+
+Team 2 : Automated deployment
+
+Team 3 (added later): Web Development and UI/UX
 ## Scope:
 
 ## Objectives:
