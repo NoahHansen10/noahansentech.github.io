@@ -24,7 +24,7 @@ fetch(mdFilePath)
 
 
     // Display the HTML content in the 'post-content' div
-    const postContentDiv = document.getElementById('post-content');
+    const postContentDiv = document.getElementById('post-content-inner');
     postContentDiv.innerHTML = htmlContent;
   })
   .catch(error => {

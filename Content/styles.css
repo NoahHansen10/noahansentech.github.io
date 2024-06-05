@@ -46,8 +46,12 @@ body {
 }
 #post-content {
     width: 100%; /* Adjust as needed */
-    display: center;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#post-content-inner img {
+    border: 2px solid #fbcb07; /* Change the color as needed */
 }
