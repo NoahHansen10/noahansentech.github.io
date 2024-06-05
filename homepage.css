@@ -12,7 +12,7 @@
   overflow: hidden; /* This hides any parts of the image that exceed the rounded border */
 }
 
-* Button 1 styles */
+/* Button 1 styles */
 .button1 {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 10px 30px 0 rgba(0, 0, 0, 0.19);
   padding: 20px 30px;
