@@ -3,6 +3,11 @@ title: Website Development
 date: 2023-08-27
 desc: The building and designing of this website
 image: post1.jpg
+tags:
+    - Website
+    - Development
+    - Design
+    - Markdown
 ---
 #
 # My First Post
