@@ -6,7 +6,7 @@ image: post1.jpg
 ---
 #
 # My First Post
-### August 27, 2023
+##### August 27, 2023
 
 When I originally designed my website I wanted to make it as simple as possible just to see what I could come up with, and now it has expanded quite a bit.
 
@@ -28,4 +28,4 @@ it goes in the future.
 
 ![image](posts/post1/post1.jpg)
 
-The image below is the first release of my homepage.
+The image above is the first release of my homepage.

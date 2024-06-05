@@ -53,7 +53,18 @@ body {
 }
 #post-content-inner img {
     border: 2px solid #fbcb07; /* Change the color as needed */
+    max-width: auto; /* Adjust as needed */
+}
+#post-content-inner h1 {
+    font-size: 2em; /* Adjust as needed */
+    margin: 20px 0; /* Adjust as needed */
+}
+#post-content-inner h5 {
+    font-size: 1em; /* Adjust as needed */
+    margin: 15px 0; /* Adjust as needed */
+    line-height: 0; /* Adjust as needed */
 }
 #post-content-inner {
     line-height: 1.6; /* Adjust as needed */
+    max-width: 60%; /* Adjust as needed */
 }
