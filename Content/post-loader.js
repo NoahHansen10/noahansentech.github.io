@@ -17,7 +17,7 @@ fetch(mdFilePath)
     const title = contentWithoutMetadata.match(/^#\s+(.*)/m)[0];
 
     // Set the title of the webpage
-    document.title = title;
+    document.title = title.replace(/^#+\s+#+/, '') + ' | Noah Hansen Tech';
 
     // Convert Markdown to HTML using the marked library
     const htmlContent = marked(contentWithoutMetadata);
