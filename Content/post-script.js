@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             const title = metadata.match(/title:\s*(.*)(\r?\ndate|\r?\ndesc)/)[1].trim();
                             const date = metadata.match(/date:\s*(.*)(\r?\ndesc|\r?\ntitle)/)[1].trim();
                             const desc = metadata.match(/desc:\s*(.*)/)[1].trim();
-                            const imageFileName = metadata.match(/image:\s*(.*)/)[1].trim();
+                            imageFileName = metadata.match(/image:\s*(.*)/)[1].trim();
                             if (imageFileName == 'None' || imageFileName == '' || imageFileName == 'null') {
                                 imageFileName = 'default.webp';
                             }
