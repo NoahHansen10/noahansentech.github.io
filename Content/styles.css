@@ -8,63 +8,69 @@
 .post-item {
     background-color: #333333;
     color: #ffffff;
-    border-radius: 10px; /* Adjust as needed */
-    padding: 15px; /* Adjust as needed */
-    text-decoration: none; /* Remove underline from links */
+    border-radius: 10px;
+    padding: 15px;
+    text-decoration: none;
 }
 
 .post-image {
     width: 100%;
     height: auto;
-    border-radius: 5px; /* Adjust as needed */
+    border-radius: 5px;
 }
 
 .post-link h2 {
-    font-size: 1.5em; /* Adjust as needed */
+    font-size: 1.5rem; /* Adjusted to rem */
     font-weight: bold;
-    color: #ffffff; /* Initial color, adjust as needed */
-    transition: color 0.01s ease; /* Add transition effect */
+    color: #ffffff;
+    transition: color 0.2s ease; /* Adjusted transition time */
 }
 
 .post-link h2:hover {
-    color: #999999; /* Color when hovered over, adjust as needed */
+    color: #999999;
 }
+
 .post-link p {
-    font-size: 0.9em; /* Adjust as needed */
+    font-size: 0.9rem; /* Adjusted to rem */
 }
 
 .post-link span {
-    font-size: 0.8em; /* Adjust as needed */
-    color: #888888; /* Adjust as needed */
+    font-size: 0.8rem; /* Adjusted to rem */
+    color: #888888;
 }
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0 auto;
-  padding: 0 auto;
-  background-color: #1f1f1f; /* Dark background color */
-  color: #fff; /* Light text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1f1f1f;
+    color: #ffffff;
 }
+
 #post-content {
-    width: 100%; /* Adjust as needed */
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#post-content-inner {
-    line-height: 1.6; /* Adjust as needed */
-    max-width: 60%; /* Adjust as needed */
-}
-#post-content-inner img {
-    border: 2px solid #fbcb07; /* Change the color as needed */
 
+#post-content-inner {
+    line-height: 1.6;
+    max-width: 60%;
 }
+
+#post-content-inner img {
+    border: 2px solid #fbcb07;
+}
+
 #post-content-inner h1 {
-    font-size: 2em; /* Adjust as needed */
-    margin: 20px 0; /* Adjust as needed */
+    font-size: 2rem; /* Adjusted to rem */
+    margin: 20px 0;
 }
+
 #post-content-inner h5 {
-    font-size: 1em; /* Adjust as needed */
-    margin: 15px 0; /* Adjust as needed */
-    line-height: 0; /* Adjust as needed */
+    font-size: 1rem; /* Adjusted to rem */
+    margin: 15px 0;
+    line-height: 1; /* Adjusted to 1 for better readability */
 }
