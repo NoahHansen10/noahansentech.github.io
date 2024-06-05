@@ -11,13 +11,14 @@
     border-radius: 10px; /* Adjust as needed */
     padding: 15px; /* Adjust as needed */
     text-decoration: none; /* Remove underline from links */
-
 }
+
 .post-image {
     width: 100%;
     height: auto;
     border-radius: 5px; /* Adjust as needed */
 }
+
 .post-link h2 {
     font-size: 1.5em; /* Adjust as needed */
     font-weight: bold;
@@ -35,4 +36,18 @@
 .post-link span {
     font-size: 0.8em; /* Adjust as needed */
     color: #888888; /* Adjust as needed */
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 0 auto;
+  background-color: #1f1f1f; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+#post-content {
+    width: 100%; /* Adjust as needed */
+    display: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
