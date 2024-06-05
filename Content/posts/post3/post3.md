@@ -2,7 +2,7 @@
 title: LANL Automated Penetration Testing
 date: 2024-04-26
 desc: Automated Penetration Testing for virtual machines for LANL
-image: post3.jpg
+image: ITOlogo.png
 tags:
   - LANL
   - Los Alamos National Laboratory
@@ -27,7 +27,6 @@ Team 1 (my original): Automated Penetration Testing
 Team 2 : Automated deployment
 
 Team 3 (added later): Web Development and UI/UX
-## Scope:
 
 ## Objectives:
 
