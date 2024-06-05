@@ -2,7 +2,7 @@
 title: OnePlus 8 Wireless Charging Mod
 date: 2022-6-07
 desc: Retroactive post about my OnePlus 8 Modding
-image: 
+image: post2.jpg
 ---
 #
 # OnePlus 8 Wireless Charging Mod
@@ -26,3 +26,8 @@ controller would fit. As it was the one thing I could not account for the thickn
 surrounding the flashlight ribbon cable to make room for the small rectangular controller. I then had to solder the controllers 
 leads to the phones motherboard and attach the coil to the back of the phone. I then had to put the partially back togeather to 
 test it, 
+
+
+![image](posts/post2/OnePlus8Bare.jpg)
+
+![image](posts/post2/OnePlus8Modded.jpg)
