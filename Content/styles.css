@@ -1,96 +1,38 @@
-/* styles.css */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    /*flex-direction: column;
-*/
-}
-
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
-main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin: 0.5rem 0;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #007bff;
-}
-/* styles.css */
-
-
-
-.post-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; /* Start items from the left */
-    align-items: center; /* Center vertically */
-    background-color: #f5f5f5;
-    padding: 20px; /* Add padding to the post list */
-}
-.post-content {
-    /* Your existing styles for post content */
-    padding-left: 20px; /* Add left padding for spacing */
-}
-
-.post-link {
-    /* Your existing styles for post links */
-    margin-top: 10px; /* Add top margin for spacing */
-}
-.post-item {
-    background-color: #333;
-    color: #fff;
+#post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
     padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
 }
-.post-item h2 {
-    font-size: 1.5rem;
-    margin: 0;
-    padding-bottom: 5px;
+
+.post-item {
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 10px; /* Adjust as needed */
+    padding: 15px; /* Adjust as needed */
+    text-decoration: none; /* Remove underline from links */
+
+}
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Adjust as needed */
+}
+.post-link h2 {
+    font-size: 1.5em; /* Adjust as needed */
     font-weight: bold;
+    color: #ffffff; /* Initial color, adjust as needed */
+    transition: color 0.01s ease; /* Add transition effect */
 }
 
-.post-item span {
-    font-size: 0.85rem;
-    opacity: 0.7;
-    margin-top: auto; /* Push the date to the bottom */
-    color: #fff;
+.post-link h2:hover {
+    color: #999999; /* Color when hovered over, adjust as needed */
+}
+.post-link p {
+    font-size: 0.9em; /* Adjust as needed */
 }
 
-.post-item p {
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-    line-height: 1.5;
+.post-link span {
+    font-size: 0.8em; /* Adjust as needed */
+    color: #888888; /* Adjust as needed */
 }

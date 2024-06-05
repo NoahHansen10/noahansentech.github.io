@@ -1,7 +1,7 @@
 ---
-title: My First Post
+title: Website Development
 date: 2023-08-27
-desc: My First Post Plus Cute Cat
+desc: The building and designing of this website
 image: post1.jpg
 ---
 

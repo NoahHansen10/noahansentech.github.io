@@ -2,7 +2,7 @@
 title: My First Post
 date: 2023-08-28
 desc: My Second Post bla bla bla
-image: post3.png
+image: post2.png
 ---
 
 # My Second Post

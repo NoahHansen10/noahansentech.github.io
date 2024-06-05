@@ -22,6 +22,7 @@ fetch(mdFilePath)
     // Convert Markdown to HTML using the marked library
     const htmlContent = marked(contentWithoutMetadata);
 
+
     // Display the HTML content in the 'post-content' div
     const postContentDiv = document.getElementById('post-content');
     postContentDiv.innerHTML = htmlContent;
