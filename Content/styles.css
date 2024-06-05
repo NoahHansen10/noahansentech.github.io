@@ -51,7 +51,9 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 #post-content-inner img {
     border: 2px solid #fbcb07; /* Change the color as needed */
+}
+#post-content-inner {
+    line-height: 1.6; /* Adjust as needed */
 }
