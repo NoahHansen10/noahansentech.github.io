@@ -12,15 +12,34 @@ document.addEventListener('DOMContentLoaded', function () {
     function fetchAndDisplayFolderContents(directory, searchTerm = '', sortBy) {
         fetchFolderNames(directory)
             .then(folderNames => {
+                if (!folderNames.length) {
+                    console.warn('No folders found in the directory:', directory);
+                    return;
+                }
+
                 postList.innerHTML = ''; // Clear previous content
 
                 const postsPromises = folderNames.map(folderName =>
                     fetch(`/Content/posts/${folderName}/${folderName}.md`)
-                        .then(response => response.text())
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
+                            }
+                            return response.text();
+                        })
                         .then(mdContent => {
-                            const metadataMatches = mdContent.match(/---([\s\S]*?)---/);
-                            const metadata = metadataMatches ? metadataMatches[1] : '';
+                            if (!mdContent) {
+                                console.error(`Empty content for folder: ${folderName}`);
+                                return null;
+                            }
 
+                            const metadataMatches = mdContent.match(/---([\s\S]*?)---/);
+                            if (!metadataMatches) {
+                                console.error(`Metadata block not found in: ${folderName}`);
+                                return { folderName, title: 'Untitled', date: 'Date not available', desc: 'No description available', imageFileName: '../../default.webp' };
+                            }
+
+                            const metadata = metadataMatches[1];
                             const titleMatch = metadata.match(/title:\s*(.*)/);
                             const title = titleMatch ? titleMatch[1].trim() : 'Untitled';
 
@@ -35,24 +54,33 @@ document.addEventListener('DOMContentLoaded', function () {
                             if (!imageFileName || imageFileName === 'None' || imageFileName === 'null') {
                                 imageFileName = '../../default.webp';
                             }
-                            //console.log(dateMatch)
+
                             const postImageURL = imageFileName.startsWith('http')
                                 ? imageFileName
                                 : `https://www.noahhansentech.com/Content/posts/${folderName}/${imageFileName}`;
 
                             return { folderName, title, date, desc, imageFileName: postImageURL };
                         })
+                        .catch(error => {
+                            console.error(`Error processing folder: ${folderName}`, error);
+                            return { folderName, title: 'Untitled', date: 'Date not available', desc: 'No description available', imageFileName: '../../default.webp' };
+                        })
                 );
 
                 Promise.all(postsPromises)
                     .then(posts => {
+                        const validPosts = posts.filter(post => post !== null);
                         if (sortBy === 'date') {
-                            posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+                            validPosts.sort((a, b) => {
+                                const dateA = new Date(a.date).getTime() || 0;
+                                const dateB = new Date(b.date).getTime() || 0;
+                                return dateB - dateA;
+                            });
                         } else if (sortBy === 'name') {
-                            posts.sort((a, b) => a.title.localeCompare(b.title));
+                            validPosts.sort((a, b) => a.title.localeCompare(b.title));
                         }
 
-                        posts.forEach(({ folderName, title, date, desc, imageFileName }) => {
+                        validPosts.forEach(({ folderName, title, date, desc, imageFileName }) => {
                             const postItem = document.createElement('a');
                             postItem.classList.add('post-item');
                             postItem.href = `posts.html?post=${folderName}`;
@@ -65,13 +93,12 @@ document.addEventListener('DOMContentLoaded', function () {
                             const postLink = document.createElement('div');
                             postLink.classList.add('post-link');
                             postLink.innerHTML = `<h2>${title}</h2><p>${desc}</p><span>${date}</span>`;
-                            //console.log("Metadata for", folderName, ":", { title, date, desc });
                             postItem.appendChild(postLink);
                             postList.appendChild(postItem);
                         });
                     })
                     .catch(error => {
-                        console.error(`Error loading or parsing posts:`, error);
+                        console.error('Error loading or parsing posts:', error);
                     });
             })
             .catch(error => {
@@ -81,11 +108,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function fetchFolderNames(directory) {
         const response = await fetch(`https://api.github.com/repos/Noahboss67/noahansentech.github.io/contents${directory.startsWith('/') ? '' : '/'}${directory}`);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch folder names: ${response.status}`);
+        }
         const data = await response.json();
-
-        return data
-            .filter(item => item.type === 'dir')
-            .map(item => item.name);
+        return data.filter(item => item.type === 'dir').map(item => item.name);
     }
 
     // Initial load
