@@ -1,13 +1,13 @@
 ---
-title: Website Development
-date: 2023-08-27
-desc: The building and designing of this website
-image: post1.jpg
+title: My First Post
+Description: Website Development
+date: 11/27/2024 3:00 PM
+updated: 11/27/2024
 tags:
-    - Website
-    - Development
-    - Design
-    - Markdown
+  - Website
+  - Development
+  - Design
+  - Markdown
 ---
 #
 # My First Post
