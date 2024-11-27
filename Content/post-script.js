@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         const metadata = metadataMatches[1];
 
-                        // Match individual fields
+                        // Safely match each metadata field with defaults
                         const titleMatch = metadata.match(/title:\s*(.*)/);
                         const title = titleMatch ? titleMatch[1].trim() : 'Untitled';
 
@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         return { folderName, title, date, desc, imageFileName: postImageURL };
                     })
+
                     .catch(error => {
                         console.error(`Error processing folder: ${folderName}`, error);
                         return { folderName, title: 'Untitled', date: 'Date not available', desc: 'No description available', imageFileName: '../../default.webp' };
