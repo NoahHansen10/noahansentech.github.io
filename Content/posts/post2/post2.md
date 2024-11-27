@@ -1,6 +1,6 @@
 ---
 title: OnePlus 8 Wireless Charging Mod
-date: 2022-6-07
+date: 07/06/2022 3:00 PM
 desc: Retroactive post about my OnePlus 8 Modding
 image: post2.jpg
 tags:

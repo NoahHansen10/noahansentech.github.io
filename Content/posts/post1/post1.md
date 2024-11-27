@@ -1,8 +1,9 @@
 ---
 title: My First Post
 Description: Website Development
-date: 11/27/2024 3:00 PM
-updated: 11/27/2024
+date: 11-27-2024 3:00 PM
+updated: 11-27-2024
+image: post1/post1.jpg
 tags:
   - Website
   - Development
