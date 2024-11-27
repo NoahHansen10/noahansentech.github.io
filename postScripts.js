@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const postsDirectory = 'Posts/';
     const postsMetadata = [
-        { fileName: 'post1', title: 'TestingPost1', date: '2023/08/01' }
+        //{ fileName: 'post1', title: 'TestingPost1', date: '2023/08/01' }
         // Add more post metadata as needed
     ];
 
