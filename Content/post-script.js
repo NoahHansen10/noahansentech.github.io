@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         }
 
                         const metadata = metadataMatches[1];
-
+                        console.log(`Metadata block for ${folderName}:`, metadata);
                         // Safely match each metadata field with defaults
                         const titleMatch = metadata.match(/title:\s*(.*)/);
                         const title = titleMatch ? titleMatch[1].trim() : 'Untitled';
