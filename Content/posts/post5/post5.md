@@ -1,6 +1,6 @@
 ---
 title: Superior Cyber Range
-Description: Template for recreation
+desc: Michigan Tech's 
 date: 11/27/2024 6:30 PM
 updated: 11/27/2024 6:30 PM
 image: SCR.png

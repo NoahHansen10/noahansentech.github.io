@@ -1,8 +1,8 @@
 ---
 title: My First Post
-Description: Website Development
-date: 11-27-2024 3:00 PM
-updated: 11-27-2024
+desc: Website Development
+date: 11/27/2023 3:00 PM
+updated: 11/27/2024 3:00 PM
 image: post1/post1.jpg
 tags:
   - Website
@@ -12,7 +12,6 @@ tags:
 ---
 #
 # My First Post
-##### August 27, 2023
 
 When I originally designed my website I wanted to make it as simple as possible just to see what I could come up with, and now it has expanded quite a bit.
 
