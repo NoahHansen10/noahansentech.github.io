@@ -1,13 +1,14 @@
 ---
 title: OnePlus 8 Wireless Charging Mod
-date: 07/06/2022 3:00 PM
+date: 2022-06-20T22:00:00
 desc: Retroactive post about my OnePlus 8 Modding
 image: post2.jpg
 tags:
-    - OnePlus
-    - Modding
-    - Wireless Charging
-    - Soldering
+  - OnePlus
+  - Modding
+  - Wireless
+  - Charging
+  - Soldering
 ---
 #
 # OnePlus 8 Wireless Charging Mod
@@ -36,3 +37,9 @@ test it,
 ![image](posts/post2/OnePlus8Bare.jpg)
 
 ![image](posts/post2/OnePlus8Modded.jpg)
+
+
+## Conclusion:
+This project was an excellent exploration into my technical skills and problem solving. I learned many things on problem solving on small circuit boards. 
+
+All in all it was a fun project that ran as my primary device for almost 6 months without any major issues.
