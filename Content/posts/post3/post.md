@@ -1,18 +1,24 @@
 ---
 title: LANL Automated Penetration Testing
-date: 04/26/2024
-updated: 11/27/2024 10:44 PM
+date: 2024-04-14T17:45:00
+updated: 2024-11-27T23:25:00
 desc: Automated Penetration Testing for virtual machines for LANL
 image: ITOlogo.png
 tags:
   - LANL
-  - Los Alamos National Laboratory
-  - Penetration Testing
+  - Los
+  - Alamos
+  - National
+  - Laboratory
+  - Penetration
+  - Testing
   - Automated
-  - Virtual Machines
+  - Virtual
+  - Machines
   - Cybersecurity
   - Research
-  - software development
+  - software
+  - development
   - Python
 ---
 #

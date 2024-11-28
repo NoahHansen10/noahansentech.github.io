@@ -1,13 +1,15 @@
 ---
 title: Superior Cyber Range
 desc: The Superior Cyber Range is a large scale cyber range development project which if primarily focused on provided an easily affordable system for local high schools, colleges, and universities.
-date: 11/27/2024 6:30 PM
-updated: 11/27/2024 6:30 PM
+date: 2024-11-27T18:30:00
+updated: 2024-11-27T23:26:00
 image: SCR.png
 tags:
   - MTU
-  - Cyber Security
-  - Professional Development
+  - Cyber
+  - Security
+  - Professional
+  - Development
 ---
 # Superior Cyber Range
 ###### 11/27/2024
