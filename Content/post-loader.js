@@ -4,28 +4,29 @@ const urlParams = new URLSearchParams(queryString);
 const postName = urlParams.get('post');
 
 // Assuming you have a directory called 'posts' where your .md files are stored
-fetch(`/Content/posts/${folderName}/${folderName}.md`)
-  .then(response => {
-    if (!response.ok) throw new Error(`Failed to load file: ${response.statusText}`);
-    return response.text();
-  })
+const mdFilePath = `/Content/posts/${postName}/${postName}.md`;
+
+// Fetch the .md file
+fetch(mdFilePath)
+  .then(response => response.text())
   .then(mdContent => {
-    const metadataMatches = mdContent.match(/---([\s\S]*?)---/);
-    const metadata = metadataMatches ? metadataMatches[1] : '';
+    // Remove YAML metadata blocks (e.g., title, date)
+    const contentWithoutMetadata = mdContent.replace(/^---([\s\S]*?)---/, '');
+    console.log(mdContent);
+    // Extract title from Markdown content
+    const title = contentWithoutMetadata.match(/^#\s+(.*)/m)[0];
 
-    console.log("Metadata content:", metadata);
+    // Set the title of the webpage
+    document.title = title.replace(/^#+\s+#+/, '') + ' | Noah Hansen Tech';
 
-    const titleMatch = metadata.match(/title:\s*(.*)/);
-    const title = titleMatch ? titleMatch[1].trim() : 'Untitled';
+    // Convert Markdown to HTML using the marked library
+    const htmlContent = marked(contentWithoutMetadata);
 
-    const dateMatch = metadata.match(/date:\s*(.+)/);
-    const date = dateMatch ? dateMatch[1].trim() : 'Unknown date';
 
-    const descMatch = metadata.match(/desc:\s*(.*)/);
-    const desc = descMatch ? descMatch[1].trim() : 'No description available';
-
-    console.log({ title, date, desc });
+    // Display the HTML content in the 'post-content' div
+    const postContentDiv = document.getElementById('post-content-inner');
+    postContentDiv.innerHTML = htmlContent;
   })
   .catch(error => {
-    console.error("Error loading or parsing post:", error);
+    console.error('Error loading or converting post:', error);
   });
