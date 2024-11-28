@@ -1,12 +1,13 @@
 ---
 title: Superior Cyber Range
-desc: Michigan Tech's 
+desc: The Superior Cyber Range is a large scale cyber range development project which if primarily focused on provided an easily affordable system for local high schools, colleges, and universities.
 date: 11/27/2024 6:30 PM
 updated: 11/27/2024 6:30 PM
 image: SCR.png
 tags:
   - MTU
   - Cyber Security
+  - Professional Development
 ---
 # Superior Cyber Range
 ###### 11/27/2024
