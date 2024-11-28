@@ -128,8 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
         metadata.title = line.replace('title:', '').trim();
       } else if (line.startsWith('image:')) {
         metadata.image = line.replace('image:', '').trim();
-      } else if (line.startsWith('datetime:')) {
-        metadata.datetime = line.replace('datetime:', '').trim();
+      } else if (line.startsWith('date:')) {
+        metadata.datetime = line.replace('date:', '').trim();
       } else if (line.startsWith('desc:')) {
         metadata.desc = line.replace('desc:', '').trim();
       }
