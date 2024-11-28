@@ -1,6 +1,7 @@
 ---
 title: LANL Automated Penetration Testing
-date: 2024-04-26
+date: 04/26/2024
+updated: 11/27/2024 10:44 PM
 desc: Automated Penetration Testing for virtual machines for LANL
 image: ITOlogo.png
 tags:

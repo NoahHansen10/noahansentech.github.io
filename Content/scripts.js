@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const postUrl = `https://raw.githubusercontent.com/${username}/${repo}/main/Content/posts/${postName}/${postName}.md`;
+    const postUrl = `https://raw.githubusercontent.com/${username}/${repo}/main/Content/posts/${postName}/post.md`;
 
     try {
       const response = await fetch(postUrl);
