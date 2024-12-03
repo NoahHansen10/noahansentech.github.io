@@ -4,7 +4,7 @@ const urlParams = new URLSearchParams(queryString);
 const postName = urlParams.get('post');
 
 // Assuming you have a directory called 'posts' where your .md files are stored
-const mdFilePath = `/Content/posts/${postName}/${postName}.md`;
+const mdFilePath = `/Content/posts/${postName}/post.md`;
 
 // Fetch the .md file
 fetch(mdFilePath)
@@ -12,8 +12,9 @@ fetch(mdFilePath)
   .then(mdContent => {
     // Remove YAML metadata blocks (e.g., title, date)
     const contentWithoutMetadata = mdContent.replace(/^---([\s\S]*?)---/, '');
-    console.log(mdContent);
+    //console.log(mdContent);
     // Extract title from Markdown content
+
     const title = contentWithoutMetadata.match(/^#\s+(.*)/m)[0];
 
     // Set the title of the webpage
