@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     async function fetchFolderNames(directory) {
-        const response = await fetch(`https://api.github.com/repos/Noahboss67/noahansentech.github.io/contents${directory.startsWith('/') ? '' : '/'}${directory}`);
+        const response = await fetch(`https://api.github.com/repos/NoahHansen10/noahansentech.github.io/contents${directory.startsWith('/') ? '' : '/'}${directory}`);
         if (!response.ok) {
             throw new Error(`Failed to fetch folder names: ${response.status}`);
         }
