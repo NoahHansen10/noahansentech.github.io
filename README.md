@@ -19,4 +19,7 @@ Then open `http://localhost:8000`.
 - `assets/docs/`: downloadable documents.
 - `components/`: shared HTML fragments (header, navbar, footer).
 - `Content/`: post list, post renderer, and markdown post folders.
-- `archive/legacy-pages/`: archived legacy pages no longer used as entrypoints.
+
+## Page Intent
+- Home (`/`): quick links dashboard for homelab services and site utilities.
+- About (`/about.html`): profile, skills, and expandable previous-experience sections.

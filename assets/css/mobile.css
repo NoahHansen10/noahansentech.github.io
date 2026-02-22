@@ -148,3 +148,106 @@ header {
     margin: 0 auto; /* Center the container */
     padding: 20px;
 }
+
+.page-section {
+  width: 92%;
+  margin: 1rem auto 2rem auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-block {
+  text-align: center;
+  margin-bottom: 1rem;
+  animation: fade-up 0.7s ease both;
+}
+
+.hero-block h1 {
+  text-shadow: 0 0 20px rgba(251, 203, 7, 0.25);
+}
+
+.hero-meta {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: 0.6rem;
+}
+
+.hero-meta span {
+  border: 1px solid rgba(251, 203, 7, 0.45);
+  border-radius: 999px;
+  padding: 0.18rem 0.6rem;
+  font-size: 0.75rem;
+  background: rgba(251, 203, 7, 0.1);
+}
+
+.quick-links-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.quick-link-card {
+  display: block;
+  text-decoration: none;
+  background: #2b2b2b;
+  color: #ffffff;
+  border: 1px solid #3d3d3d;
+  border-radius: 10px;
+  padding: 0.85rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.26);
+  animation: fade-up 0.5s ease both;
+}
+
+.quick-link-card h2 {
+  margin-bottom: 0.4rem;
+}
+
+.quick-links-grid .quick-link-card:nth-child(1) { animation-delay: 0.06s; }
+.quick-links-grid .quick-link-card:nth-child(2) { animation-delay: 0.12s; }
+.quick-links-grid .quick-link-card:nth-child(3) { animation-delay: 0.18s; }
+.quick-links-grid .quick-link-card:nth-child(4) { animation-delay: 0.24s; }
+.quick-links-grid .quick-link-card:nth-child(5) { animation-delay: 0.30s; }
+.quick-links-grid .quick-link-card:nth-child(6) { animation-delay: 0.36s; }
+
+.experience-item {
+  background: #2b2b2b;
+  border: 1px solid #3d3d3d;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+  padding: 0.7rem;
+}
+
+.experience-item summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.home-showcase {
+  background:
+    radial-gradient(circle at 8% 12%, rgba(251, 203, 7, 0.14), transparent 35%),
+    radial-gradient(circle at 90% 18%, rgba(0, 170, 255, 0.1), transparent 40%),
+    #1f1f1f;
+  animation: bg-shift 14s ease-in-out infinite alternate;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bg-shift {
+  from {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  to {
+    background-position: 18px -12px, -18px 12px, 0 0;
+  }
+}
