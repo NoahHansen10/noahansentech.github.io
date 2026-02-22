@@ -1,12 +1,25 @@
 ---
-title: Post Template
-desc: templatePost
-date: 0001-01-30T00:00:00
-updated: 0001-01-30T00:00:00
-image: post.webp
+title: Post Title
+desc: Short one-line summary for the post card and top section.
+date: 2026-01-01T12:00:00
+updated: 2026-01-01T12:00:00
+image: cover.webp
 tags:
-  - tag1
-  - tag2
-  - tag3
+  - TagOne
+  - TagTwo
+  - TagThree
 ---
-markdown text
+## Introduction
+Start with context and what this post covers.
+
+## What I Built
+- Key decision one
+- Key decision two
+- Key decision three
+
+## Results
+Summarize outcomes, learnings, and what changed.
+
+## Next Steps
+- Follow-up improvement one
+- Follow-up improvement two

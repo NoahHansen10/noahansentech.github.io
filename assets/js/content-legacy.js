@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dateRaw = String(raw.date || '').trim();
     const date = dateRaw && !Number.isNaN(new Date(dateRaw).getTime()) ? dateRaw : null;
     const image = String(raw.image || '').trim();
+    const isLogoImage = /(logo|icon)/i.test(image);
 
     return {
       slug,
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc,
       date,
       image,
+      isLogoImage,
       imageUrl: image ? `/Content/posts/${slug}/${image}` : defaultImage,
       tags: Array.isArray(raw.tags) ? raw.tags : [],
     };
@@ -160,6 +162,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const postImage = document.createElement('img');
       postImage.className = 'post-image';
+      if (post.isLogoImage) {
+        postImage.classList.add('post-image--logo');
+      }
       postImage.src = post.imageUrl;
       postImage.alt = `${post.title} preview image`;
       postImage.loading = 'lazy';

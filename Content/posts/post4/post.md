@@ -11,9 +11,6 @@ tags:
   - Professional
   - Development
 ---
-# Superior Cyber Range
-###### 11/27/2024
-
 ## Background:
 
 The Superior Cyber Range project is a collaborative effort led by Michigan Technological University (MTU), in partnership with Northern Michigan University (NMU) and Baraga Community College, designed to serve the entire Upper Peninsula of Michigan and beyond. The project aims to provide a state-of-the-art, scalable, and versatile environment for cybersecurity education, training, and research. This initiative will support institutions, students, and professionals by enabling hands-on experience in realistic cyber defense and attack scenarios.
@@ -46,4 +43,3 @@ The Superior Cyber Range project is a collaborative effort led by Michigan Techn
 - ### Vision and Long-Term Plan:
   - Completion within three years, with a proof of concept (POC) and proof of value (POV) ready by mid-February for NSF funding.
   Future expansion plans include enabling other institutions across Michigan to connect to the range for improved performance.
-

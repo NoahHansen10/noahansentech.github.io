@@ -4,7 +4,7 @@
 
   const FALLBACK_IDS = {
     sso: 5,
-    wiki: 8,
+    wiki: 15,
     core: 7,
   };
 
@@ -71,7 +71,7 @@
 
       return {
         sso: resolveMonitorId(monitors, /authentik|sso/i, FALLBACK_IDS.sso),
-        wiki: resolveMonitorId(monitors, /wiki|website/i, FALLBACK_IDS.wiki),
+        wiki: resolveMonitorId(monitors, /wiki/i, FALLBACK_IDS.wiki),
         core: resolveMonitorId(monitors, /homelab|systems|dc0\d/i, FALLBACK_IDS.core),
       };
     } catch (error) {

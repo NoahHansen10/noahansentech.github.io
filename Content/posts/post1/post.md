@@ -10,9 +10,6 @@ tags:
   - Design
   - Markdown
 ---
-#
-# My First Post
-
 When I originally designed my website I wanted to make it as simple as possible just to see what I could come up with, and now it has expanded quite a bit.
 
 Back awhile ago I decided that I wanted to have the ability to has support for rich text without the need for writing the 

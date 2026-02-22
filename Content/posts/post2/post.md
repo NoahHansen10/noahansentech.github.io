@@ -10,10 +10,6 @@ tags:
   - Charging
   - Soldering
 ---
-#
-# OnePlus 8 Wireless Charging Mod
-### June 7, 2022
-
 ## Introduction:
 
 I have had my OnePlus 8 for a while now and I have been loving it. The only thing that I have been missing is wireless charging

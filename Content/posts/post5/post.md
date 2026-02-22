@@ -7,9 +7,6 @@ image: download.png
 tags:
   - HomeLab
 ---
-# HomeLab
-###### 02/21/2026
-
 # Introduction
 Over the past few weeks, I completed a significant infrastructure refresh in my homelab environment. The updates focused on:
 
@@ -56,4 +53,3 @@ The PA-440 now acts as the primary L3 gateway for:
 Proxmox nodes are connected via trunk ports and pass VLAN tags directly to VMs.
 
 Key change: I eliminated overlapping subnets between Proxmox management and guest networks, which was causing asymmetric routing and inconsistent firewall behavior.
-
