@@ -16,8 +16,10 @@ body {
 
 /* Navigation bar styles */
 nav {
-  background-color: #333;
+  background: linear-gradient(120deg, rgba(34, 34, 34, 0.82), rgba(44, 44, 44, 0.72));
   padding: 1rem 0;
+  border-bottom: 1px solid rgba(251, 203, 7, 0.2);
+  backdrop-filter: blur(6px);
 }
 
 nav ul {
@@ -57,10 +59,12 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
+  background: linear-gradient(120deg, rgba(27, 27, 27, 0.9), rgba(34, 34, 34, 0.82));
   color: #fff;
   padding: 1rem 0;
   position: relative; /* Add this line */
+  border-top: 1px solid rgba(251, 203, 7, 0.2);
+  backdrop-filter: blur(6px);
 }
 
 /* Rest of your existing styles... */
@@ -95,12 +99,14 @@ ul {
 
 header {
   text-align: center;
-  background-color: #333;
+  background: linear-gradient(120deg, rgba(27, 27, 27, 0.9), rgba(34, 34, 34, 0.82));
   color: #fff;
   padding: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid rgba(251, 203, 7, 0.2);
+  backdrop-filter: blur(6px);
 }
 
 /* Button 1 styles */
@@ -211,6 +217,84 @@ header {
 .quick-links-grid .quick-link-card:nth-child(5) { animation-delay: 0.30s; }
 .quick-links-grid .quick-link-card:nth-child(6) { animation-delay: 0.36s; }
 
+.status-strip {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0 auto 1rem auto;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  border: 1px solid #3d3d3d;
+  background: rgba(31, 31, 31, 0.9);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.38rem 0.7rem;
+  font-size: 0.78rem;
+}
+
+.status-value {
+  margin-left: 0.2rem;
+}
+
+.dot {
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.ok {
+  background: #2ddf8f;
+  box-shadow: 0 0 0 rgba(45, 223, 143, 0.7);
+  animation: pulse 1.8s infinite;
+}
+
+.dot.warn {
+  background: #f1b600;
+}
+
+.dot.down {
+  background: #ff5c5c;
+}
+
+.dot.unknown {
+  background: #8f8f8f;
+}
+
+.home-feature-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.feature-card {
+  background: #242424;
+  border: 1px solid #3d3d3d;
+  border-radius: 10px;
+  padding: 0.85rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+  animation: fade-up 0.5s ease both;
+}
+
+.feature-card h3 {
+  margin-top: 0.45rem;
+  margin-bottom: 0.4rem;
+}
+
+.feature-link {
+  color: #fbcb07;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.now-list {
+  margin: 0.45rem 0 0.7rem 1rem;
+}
+
 .experience-item {
   background: #2b2b2b;
   border: 1px solid #3d3d3d;
@@ -232,6 +316,31 @@ header {
   animation: bg-shift 14s ease-in-out infinite alternate;
 }
 
+.showcase-page {
+  background:
+    radial-gradient(circle at 8% 12%, rgba(251, 203, 7, 0.12), transparent 34%),
+    radial-gradient(circle at 88% 20%, rgba(0, 170, 255, 0.09), transparent 38%),
+    #1f1f1f;
+  animation: bg-shift 18s ease-in-out infinite alternate;
+}
+
+.showcase-page .container > div,
+.showcase-page .experience-item,
+.showcase-page .centerGrid {
+  background: rgba(36, 36, 36, 0.9);
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.showcase-page #about > h1,
+.showcase-page #home > div,
+.showcase-page #home > .container,
+.showcase-page #home > .centerGrid,
+.showcase-page .experience-item {
+  animation: fade-up 0.55s ease both;
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -249,5 +358,17 @@ header {
   }
   to {
     background-position: 18px -12px, -18px 12px, 0 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(45, 223, 143, 0.65);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(45, 223, 143, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(45, 223, 143, 0);
   }
 }

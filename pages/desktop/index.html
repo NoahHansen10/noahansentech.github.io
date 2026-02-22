@@ -23,6 +23,15 @@
     </div>
   </div>
 
+  <section class="status-strip" aria-label="Service Status">
+    <a href="https://status.ndhansen.com/status/home" target="_blank" rel="noreferrer noopener" class="status-pill" data-kuma-key="public">
+      <span class="dot unknown"></span> Public Status: <strong class="status-value">Loading</strong>
+    </a>
+    <span class="status-pill" data-kuma-key="sso"><span class="dot unknown"></span> SSO: <strong class="status-value">Loading</strong></span>
+    <span class="status-pill" data-kuma-key="wiki"><span class="dot unknown"></span> Wiki: <strong class="status-value">Loading</strong></span>
+    <span class="status-pill" data-kuma-key="core"><span class="dot unknown"></span> Core Services: <strong class="status-value">Loading</strong></span>
+  </section>
+
   <div class="quick-links-grid">
     <a class="quick-link-card" href="https://sso.ndhansen.com" target="_blank" rel="noreferrer noopener">
       <h2>Authentik</h2>
@@ -54,10 +63,30 @@
       <p>Latest public resume PDF.</p>
     </a>
   </div>
+
+  <div class="home-feature-grid">
+    <article class="feature-card">
+      <h2>Featured Project</h2>
+      <h3>OnePlus 8 ROM and Root Workflow</h3>
+      <p>Deep-dive writeup on bootloader unlock, custom ROM deployment, and post-install hardening workflow.</p>
+      <a href="/Content/posts.html?post=post2" class="feature-link">Read Project</a>
+    </article>
+
+    <article class="feature-card">
+      <h2>Now</h2>
+      <ul class="now-list">
+        <li>Building repeatable homelab runbooks and operational docs.</li>
+        <li>Expanding identity-first access patterns with SSO and policy controls.</li>
+        <li>Publishing more project writeups in the Projects section.</li>
+      </ul>
+      <a href="/Content/postlist.html" class="feature-link">View All Projects</a>
+    </article>
+  </div>
 </section>
 
 <footer class="footer-container"></footer>
 <script src="/assets/js/layout.js"></script>
+<script src="/assets/js/kuma-status.js"></script>
 <script src="/assets/js/mobile-checker.js"></script>
 </body>
 </html>
