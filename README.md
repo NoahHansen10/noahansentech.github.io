@@ -1,8 +1,22 @@
-### Primary Information
-This website is free for anyone to use or fork for their own uses. Deployment is handled through GitHub pages, but can also be done using cloud flare pages if you have a domain though them. 
+## Overview
+This is a static site designed for GitHub Pages deployment.
 
-because this website runs primarily though JS and HTML and doesn't have a real back-end, it is easy to host and also test local environments. my preferred is just using a basic python3 web server which can be done though 
+## Local Development
+From the repository root:
 
 `python3 -m http.server`
 
-ensuring that you are in the root of the project.
+Then open `http://localhost:8000`.
+
+## Repository Structure
+- `index.html`, `about.html`, `HomeLab.html`: root compatibility entrypoints for GitHub Pages and legacy links.
+- `pages/desktop/`: canonical desktop pages.
+- `pages/mobile/`: canonical mobile pages.
+- `mobile/`: compatibility redirects for legacy mobile URLs.
+- `assets/css/`: shared and page-type stylesheets.
+- `assets/js/`: shared loaders and page scripts.
+- `assets/images/`: image assets and favicon.
+- `assets/docs/`: downloadable documents.
+- `components/`: shared HTML fragments (header, navbar, footer).
+- `Content/`: post list, post renderer, and markdown post folders.
+- `archive/legacy-pages/`: archived legacy pages no longer used as entrypoints.

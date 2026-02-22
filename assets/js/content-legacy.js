@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             postList.innerHTML = ''; // Clear previous content
 
             const postsPromises = folderNames.map(folderName =>
-                fetch(`/Content/posts/${folderName}/${folderName}.md`)
+                fetch(`/Content/posts/${folderName}/post.md`)
                     .then(response => {
                         if (!response.ok) {
                             throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
@@ -30,14 +30,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     .then(mdContent => {
                         if (!mdContent) {
                             console.error(`Empty content for folder: ${folderName}`);
-                            return { folderName, title: 'Untitled', date: 'Date not available', desc: 'No description available', imageFileName: '../../default.webp' };
+                            return { folderName, title: 'Untitled', date: 'Date not available', desc: 'No description available', imageFileName: '/assets/images/default.webp' };
                         }
 
                         // Extract metadata block
                         const metadataMatches = mdContent.match(/---([\s\S]*?)---/);
                         if (!metadataMatches) {
                             console.warn(`Metadata block not found in: ${folderName}`);
-                            return { folderName, title: 'Untitled', date: 'Date not available', desc: 'No description available', imageFileName: '../../default.webp' };
+                            return { folderName, title: 'Untitled', date: 'Date not available', desc: 'No description available', imageFileName: '/assets/images/default.webp' };
                         }
 
                         const metadata = metadataMatches[1];
@@ -53,23 +53,23 @@ document.addEventListener('DOMContentLoaded', function () {
                         const desc = descMatch ? descMatch[1].trim() : 'No description available';
 
                         const imageMatch = metadata.match(/image:\s*(.*)/);
-                        let imageFileName = imageMatch ? imageMatch[1].trim() : '../../default.webp';
+                        let imageFileName = imageMatch ? imageMatch[1].trim() : '/assets/images/default.webp';
 
                         // Fallback for invalid or missing image file names
                         if (!imageFileName || imageFileName === 'None' || imageFileName === 'null') {
-                            imageFileName = '../../default.webp';
+                            imageFileName = '/assets/images/default.webp';
                         }
 
                         const postImageURL = imageFileName.startsWith('http')
                             ? imageFileName
-                            : `https://www.noahhansentech.com/Content/posts/${folderName}/${imageFileName}`;
+                            : `/Content/posts/${folderName}/${imageFileName}`;
 
                         return { folderName, title, date, desc, imageFileName: postImageURL };
                     })
 
                     .catch(error => {
                         console.error(`Error processing folder: ${folderName}`, error);
-                        return { folderName, title: 'Untitled', date: 'Date not available', desc: 'No description available', imageFileName: '../../default.webp' };
+                        return { folderName, title: 'Untitled', date: 'Date not available', desc: 'No description available', imageFileName: '/assets/images/default.webp' };
                     })
             );
 

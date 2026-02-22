@@ -84,11 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
             postImage.classList.add('post-image');
             postImage.src = metadata.image
               ? `https://raw.githubusercontent.com/${username}/${repo}/main/Content/posts/${item.name}/${metadata.image}`
-              : `https://raw.githubusercontent.com/${username}/${repo}/main/Content/default.webp`; // Default image fallback
+              : `/assets/images/default.webp`; // Default image fallback
             postImage.alt = `Image for ${metadata.title || file.name}`;
             postImage.onerror = () => {
               console.log(`Image failed to load, using default for ${file.name}`);
-              postImage.src = `https://raw.githubusercontent.com/${username}/${repo}/main/Content/default.webp`;
+              postImage.src = '/assets/images/default.webp';
             }; // Ensure default image on error
 
             const postLink = document.createElement('div');

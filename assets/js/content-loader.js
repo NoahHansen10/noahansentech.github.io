@@ -3,11 +3,14 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const postName = urlParams.get('post');
 
-// Assuming you have a directory called 'posts' where your .md files are stored
-const mdFilePath = `/Content/posts/${postName}/post.md`;
+if (!postName) {
+  console.error('Missing post query parameter.');
+} else {
+  // Assuming you have a directory called 'posts' where your .md files are stored
+  const mdFilePath = `/Content/posts/${postName}/post.md`;
 
-// Fetch the .md file
-fetch(mdFilePath)
+  // Fetch the .md file
+  fetch(mdFilePath)
   .then(response => response.text())
   .then(mdContent => {
     // Remove YAML metadata blocks (e.g., title, date)
@@ -15,7 +18,8 @@ fetch(mdFilePath)
     //console.log(mdContent);
     // Extract title from Markdown content
 
-    const title = contentWithoutMetadata.match(/^#\s+(.*)/m)[0];
+    const titleMatch = contentWithoutMetadata.match(/^#\s+(.*)/m);
+    const title = titleMatch ? titleMatch[0] : 'Post';
 
     // Set the title of the webpage
     document.title = title.replace(/^#+\s+#+/, '') + ' | Noah Hansen Tech';
@@ -28,6 +32,7 @@ fetch(mdFilePath)
     const postContentDiv = document.getElementById('post-content-inner');
     postContentDiv.innerHTML = htmlContent;
   })
-  .catch(error => {
-    console.error('Error loading or converting post:', error);
-  });
+    .catch(error => {
+      console.error('Error loading or converting post:', error);
+    });
+}
