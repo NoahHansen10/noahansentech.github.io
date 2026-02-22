@@ -49,12 +49,10 @@
     cursor: pointer;
 }
 .centerGrid {
-    display: grid;
-    grid-template-columns: 1fr; /* 3 columns with equal width */
-    gap: 20px; /* Gap between grid items */
+    display: block;
     max-width: 960px; /* Limit the width of the container */
     margin: 0 auto; /* Center the container */
-    padding: 20px;
+    padding: 0.75rem 0;
 }
 .post-date {
     display: block;
@@ -66,7 +64,7 @@
     font-family: Arial, sans-serif;
     margin: 0 auto;
     padding: 0 auto;
-    background-color: #1f1f1f; /* Dark background color */
+    background-color: transparent;
     color: #fff;
   /* Add any desired styles */
 }
@@ -269,22 +267,28 @@
   animation: bg-shift 16s ease-in-out infinite alternate;
 }
 
-.showcase-page .grid-container > div,
-.showcase-page .container > div,
-.showcase-page .experience-wrap,
-.showcase-page .centerGrid {
-  background: rgba(36, 36, 36, 0.86);
-  border: 1px solid #3a3a3a;
+.glass-panel {
+  background: linear-gradient(160deg, rgba(38, 38, 38, 0.86), rgba(30, 30, 30, 0.78));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid rgba(251, 203, 7, 0.55);
   border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.24);
 }
 
-.showcase-page #about > h1,
-.showcase-page #home > div,
-.showcase-page #home > .container,
-.showcase-page #home > .centerGrid,
-.showcase-page .experience-wrap {
+.text-panel {
+  max-width: 960px;
+  margin: 0.4rem auto 1rem auto;
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  background: rgba(34, 34, 34, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.showcase-page .glass-panel,
+.showcase-page .text-panel,
+.showcase-page .experience-wrap,
+.showcase-page .experience-item {
   animation: fade-up 0.6s ease both;
 }
 

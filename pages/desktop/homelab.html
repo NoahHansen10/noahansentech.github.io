@@ -16,13 +16,13 @@
         <h1 style="text-align: center;">Hardware</h1>
     </div>
     <div class="container">
-        <div>
+        <div class="glass-panel">
             <h2>Virtualization Server</h2>
             <li>CPU: 14 Core Xeon E5-2680</li>
             <li>28 Threads</li>
             <li>RAM: 128GB DDR4 ECC</li>
         </div>
-        <div>
+        <div class="glass-panel">
             <h2>Storage Server</h2>
             <li>CPU:  10 Core CPU E5-2630 v4</li>
             <li>20 threads</li>
@@ -30,21 +30,21 @@
             <li>Storage: 10x 4tb SAS Raid Z1</li>
             <li>         4x 2tb NVME SSD</li>
         </div>
-        <div>
+        <div class="glass-panel">
             <h2>Physical Hardware</h2>
             <li>TPLink Deco</li>
             <li>PA-440</li>
             <li>Hp 24-port Switch</li>
             <li>Raspberry Pi 4b</li>
         </div>
-        <div>
+        <div class="glass-panel">
             <h2>SaaS</h2>
             <li>CloudFlare DNS, Domain Hosting</li>
             <li>AWS SES for email SMTP</li>
             <li>GitHub Pages for web hosting</li>
         </div>
     </div>
-    <div style="margin: 0 auto">
+    <div class="text-panel" style="margin: 0 auto">
         <h1 style="text-align: center;"><b>Software</b></h1>
         <p class="centerGrid">Currently, my virtualization is shared betweeen my storage server running Hexos (TrueNAS Scale) and Proxmox. The Raspberry PI is running a local hostassistant instance which I have gained remote access to though the use of cloudflared zero trust tunneling.</p>
         <h1 style="text-align: center;"><b>Security</b></h1>
@@ -53,5 +53,6 @@
 </section>
 <footer class="footer-container"></footer>
 <script src="/assets/js/layout.js"></script>
+<script src="/assets/js/mobile-checker.js"></script>
 </body>
 </html>

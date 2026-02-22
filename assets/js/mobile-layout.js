@@ -13,7 +13,7 @@ fetch('/components/header-brand.html')
     console.error('Error fetching header content:', error);
   });
 
-fetch('/components/navbar.html')
+fetch('/components/navbar-mobile.html')
   .then(response => response.text())
   .then(content => {
     if (navContainer) {

@@ -147,12 +147,10 @@ header {
     cursor: pointer;
 }
 .centerGrid {
-    display: grid;
-    grid-template-columns: 1fr; /* 3 columns with equal width */
-    gap: 20px; /* Gap between grid items */
+    display: block;
     max-width: 960px; /* Limit the width of the container */
     margin: 0 auto; /* Center the container */
-    padding: 20px;
+    padding: 0.7rem 0;
 }
 
 .page-section {
@@ -324,21 +322,61 @@ header {
   animation: bg-shift 18s ease-in-out infinite alternate;
 }
 
-.showcase-page .container > div,
-.showcase-page .experience-item,
-.showcase-page .centerGrid {
-  background: rgba(36, 36, 36, 0.9);
-  border: 1px solid #3a3a3a;
+.glass-panel {
+  background: linear-gradient(160deg, rgba(38, 38, 38, 0.9), rgba(30, 30, 30, 0.82));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid rgba(251, 203, 7, 0.5);
   border-radius: 10px;
   padding: 0.8rem;
 }
 
-.showcase-page #about > h1,
-.showcase-page #home > div,
-.showcase-page #home > .container,
-.showcase-page #home > .centerGrid,
+.text-panel {
+  max-width: 100%;
+  margin: 0.3rem auto 0.9rem auto;
+  padding: 0.8rem 0.9rem;
+  border-radius: 10px;
+  background: rgba(34, 34, 34, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.showcase-page .glass-panel,
+.showcase-page .text-panel,
 .showcase-page .experience-item {
   animation: fade-up 0.55s ease both;
+}
+
+.mobile-about {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.mobile-about > h1,
+.mobile-about > h2 {
+  margin: 0.1rem 0;
+}
+
+.mobile-about .text-panel,
+.mobile-about .glass-panel {
+  width: 100%;
+}
+
+.mobile-about .about-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.55rem;
+  margin-top: 0.75rem;
+}
+
+.mobile-about .about-actions a {
+  display: block;
+}
+
+.mobile-about .about-actions .button1 {
+  width: 100%;
+}
+
+.mobile-about ul {
+  margin-left: 1rem;
 }
 
 @keyframes fade-up {
