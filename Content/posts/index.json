@@ -1,0 +1,81 @@
+[
+  {
+    "slug": "post5",
+    "title": "HomeLab",
+    "desc": "HomeLab is a personal project focused on building and maintaining a home-based lab environment for learning and experimentation in various technology domains, including cybersecurity, networking, and system administration. The project aims to provide a hands-on learning experience by setting up and configuring different hardware and software components to create a versatile and functional lab environment.",
+    "date": "2026-02-21T18:30:00",
+    "updated": "2026-02-21T18:30:00",
+    "image": "download.png",
+    "tags": [
+      "HomeLab"
+    ]
+  },
+  {
+    "slug": "post4",
+    "title": "Superior Cyber Range",
+    "desc": "The Superior Cyber Range is a large scale cyber range development project which if primarily focused on provided an easily affordable system for local high schools, colleges, and universities.",
+    "date": "2024-11-27T18:30:00",
+    "updated": "2024-11-27T23:26:00",
+    "image": "SCR.png",
+    "tags": [
+      "MTU",
+      "Cyber",
+      "Security",
+      "Professional",
+      "Development"
+    ]
+  },
+  {
+    "slug": "post3",
+    "title": "LANL Automated Penetration Testing",
+    "desc": "Automated Penetration Testing for virtual machines for LANL",
+    "date": "2024-04-26T17:45:00",
+    "updated": "2024-11-27T23:25:00",
+    "image": "ITOlogo.png",
+    "tags": [
+      "LANL",
+      "Los",
+      "Alamos",
+      "National",
+      "Laboratory",
+      "Penetration",
+      "Testing",
+      "Automated",
+      "Virtual",
+      "Machines",
+      "Cybersecurity",
+      "Research",
+      "software",
+      "development",
+      "Python"
+    ]
+  },
+  {
+    "slug": "post1",
+    "title": "My First Post",
+    "desc": "Website Development",
+    "date": "2023-11-27T15:00:00",
+    "updated": "2024-11-27T15:00:00",
+    "image": "post1.jpg",
+    "tags": [
+      "Website",
+      "Development",
+      "Design",
+      "Markdown"
+    ]
+  },
+  {
+    "slug": "post2",
+    "title": "OnePlus 8 Wireless Charging Mod",
+    "desc": "Retroactive post about my OnePlus 8 Modding",
+    "date": "2022-06-20T22:00:00",
+    "image": "post2.jpg",
+    "tags": [
+      "OnePlus",
+      "Modding",
+      "Wireless",
+      "Charging",
+      "Soldering"
+    ]
+  }
+]

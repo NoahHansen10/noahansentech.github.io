@@ -11,15 +11,23 @@
 <body>
 <header></header>
 <nav></nav>
-<select id="sorting-select">
-    <option value="name">Sort by Name</option>
-    <option value="date" selected>Sort by Date</option>
-</select>
-<post-list>
-    <posts id="post-list">
-        <!-- Links to posts will be inserted here -->
-    </posts>
-</post-list>
+
+<main id="posts-page">
+    <section class="posts-toolbar">
+        <input id="search-input" type="search" placeholder="Search posts..." aria-label="Search posts">
+        <select id="sorting-select" aria-label="Sort posts">
+            <option value="date" selected>Sort by Date</option>
+            <option value="name">Sort by Name</option>
+        </select>
+    </section>
+
+    <p id="post-list-state" class="posts-state">Loading posts...</p>
+
+    <section id="post-list" aria-live="polite">
+        <!-- Post cards are rendered by JavaScript -->
+    </section>
+</main>
+
 <footer></footer>
 <script src="/assets/js/content-legacy.js"></script>
 <script src="/assets/js/layout.js"></script>
