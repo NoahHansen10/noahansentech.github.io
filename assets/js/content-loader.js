@@ -125,8 +125,22 @@
     });
   };
 
+  const escapeHtml = (value) => {
+    if (typeof value !== 'string') {
+      return '';
+    }
+
+    return value
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;')
+      .replace(/\//g, '&#x2F;');
+  };
+
   const renderPost = (metadata, markdown) => {
-    const title = metadata.title || postName;
+    const title = metadata.title || escapeHtml(postName);
     const withoutDuplicateTop = stripDuplicateTopHeadings(markdown, title);
     const normalized = rewriteObsidianImages(withoutDuplicateTop, postName);
     const htmlContent = marked(normalized);
