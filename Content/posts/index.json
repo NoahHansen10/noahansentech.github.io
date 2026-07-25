@@ -1,5 +1,34 @@
 [
   {
+    "slug": "post6",
+    "title": "Buffered RTSP Streams Over Starlink",
+    "desc": "I messed around with buffered RTSP streams so video would stay usable even when the network gets weird over Starlink.",
+    "date": "2026-07-25T18:30:00",
+    "updated": "2026-07-25T18:30:00",
+    "tags": [
+      "HomeLab",
+      "Starlink",
+      "RTSP",
+      "Networking",
+      "Video"
+    ]
+  },
+  {
+    "slug": "post7",
+    "title": "Sephora and Ansible VM Automation",
+    "desc": "I set up Sephora with Ansible so I could automatically manage VMs and containers instead of doing everything by hand.",
+    "date": "2026-07-24T18:30:00",
+    "updated": "2026-07-24T18:30:00",
+    "tags": [
+      "HomeLab",
+      "Ansible",
+      "Automation",
+      "Proxmox",
+      "VMs",
+      "CTs"
+    ]
+  },
+  {
     "slug": "post5",
     "title": "HomeLab",
     "desc": "HomeLab is a personal project focused on building and maintaining a home-based lab environment for learning and experimentation in various technology domains, including cybersecurity, networking, and system administration. The project aims to provide a hands-on learning experience by setting up and configuring different hardware and software components to create a versatile and functional lab environment.",
